@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController
 import java.util.*
 
 @RestController
-@RequestMapping("/reactive")
+@RequestMapping("/people")
 class ReactiveController(private val r2dbcPanelistRepository: R2dbcPersonRepository) {
 
     @GetMapping("/{id}")

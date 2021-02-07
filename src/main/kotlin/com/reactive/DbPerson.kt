@@ -12,6 +12,6 @@ data class DbPerson(
     val pictureUrl: String? = null,
     val birthday: LocalDate,
     val gender: String? = null,
-    val zipCode: String? = null,
+    val postalCode: String? = null,
     val countryCode: String
 )

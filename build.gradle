@@ -24,14 +24,16 @@ repositories {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation "org.jetbrains.kotlin:kotlin-reflect"
-    implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
-    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation "org.springframework.boot:spring-boot-starter-data-r2dbc"
+    implementation "org.springframework.boot:spring-boot-starter-webflux"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-reactor:$kotlin_coroutines_version"
-    implementation 'io.r2dbc:r2dbc-pool'
-    runtimeOnly 'io.r2dbc:r2dbc-postgresql'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'io.projectreactor:reactor-test'
+    implementation "org.flywaydb:flyway-core"
+    runtimeOnly "io.r2dbc:r2dbc-pool"
+    runtimeOnly "io.r2dbc:r2dbc-postgresql"
+    runtimeOnly "org.postgresql:postgresql" // only because flyway has no support to R2DBC yet
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+    testImplementation "io.projectreactor:reactor-test"
 }
 
 compileKotlin {

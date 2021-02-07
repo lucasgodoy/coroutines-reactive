@@ -1,11 +1,16 @@
 spring:
   r2dbc:
-    url: r2dbc:postgres://<url of your DB>/<your DB name>?rewriteBatchedStatements=true
-    username: <username>
-    password: <password>
+    url: r2dbc:postgres://localhost:5432/reactive?rewriteBatchedStatements=true
+    username: postgres
+    password: postgres
     initialization-mode: always
     pool:
       enabled: true
       initial-size: 10
       max-size: 10
       max-idle-time: 30m
+  flyway: # just because Flyway does not support R2DBC yet, so we're forced to have this part with the old JDBC
+    url: jdbc:postgresql://localhost:5432/reactive
+         #jdbc:postgresql://localhost:5432/percently_retailer
+    username: ${spring.r2dbc.username}
+    password: ${spring.r2dbc.password}
