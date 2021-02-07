@@ -1,0 +1,6 @@
+ext {
+    kotlin_version = "1.4.30"
+    kotlin_coroutines_version = "1.4.2"
+    spring_version = '2.4.2'
+    spring_dependencies_version = '1.0.11.RELEASE'
+}

@@ -1,0 +1,11 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgres://<url of your DB>/<your DB name>?rewriteBatchedStatements=true
+    username: <username>
+    password: <password>
+    initialization-mode: always
+    pool:
+      enabled: true
+      initial-size: 10
+      max-size: 10
+      max-idle-time: 30m
