@@ -14,3 +14,8 @@ spring:
          #jdbc:postgresql://localhost:5432/percently_retailer
     username: ${spring.r2dbc.username}
     password: ${spring.r2dbc.password}
+
+logging:
+  level:
+    io.r2dbc.postgresql.QUERY: DEBUG # for queries
+    io.r2dbc.postgresql.PARAM: DEBUG # for parameters

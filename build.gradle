@@ -28,7 +28,7 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-webflux"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-reactor:$kotlin_coroutines_version"
-    implementation "org.flywaydb:flyway-core"
+    runtimeOnly "org.flywaydb:flyway-core"
     runtimeOnly "io.r2dbc:r2dbc-pool"
     runtimeOnly "io.r2dbc:r2dbc-postgresql"
     runtimeOnly "org.postgresql:postgresql" // only because flyway has no support to R2DBC yet
