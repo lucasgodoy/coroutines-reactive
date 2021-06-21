@@ -20,5 +20,4 @@ class FlywayConfig(val env: Environment) {
                 )
         )
     }
-
 }
