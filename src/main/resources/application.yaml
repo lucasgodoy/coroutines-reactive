@@ -1,3 +1,5 @@
+server.port: 8009
+
 spring:
   r2dbc:
     url: r2dbc:postgres://localhost:5432/reactive?rewriteBatchedStatements=true
@@ -19,3 +21,10 @@ logging:
   level:
     io.r2dbc.postgresql.QUERY: DEBUG # for queries
     io.r2dbc.postgresql.PARAM: DEBUG # for parameters
+
+# for swagger docs
+springdoc:
+  apiDocs:
+    path: /coroutine-api-docs
+  swaggerUi:
+    path: /coroutine-api-docs/coroutine-api-ui.html

@@ -34,6 +34,10 @@ dependencies {
     runtimeOnly "org.postgresql:postgresql" // only because flyway has no support to R2DBC yet
     testImplementation "org.springframework.boot:spring-boot-starter-test"
     testImplementation "io.projectreactor:reactor-test"
+    implementation "org.springdoc:springdoc-openapi-webflux-ui:1.5.9"
+    implementation "org.springdoc:springdoc-openapi-data-rest:1.5.9"
+    implementation "org.springdoc:springdoc-openapi-kotlin:1.5.9"
+    implementation "org.springdoc:springdoc-openapi-webflux-core:1.5.9"
 }
 
 compileKotlin {
